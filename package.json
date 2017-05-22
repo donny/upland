@@ -1,0 +1,9 @@
+{
+  "name": "upland",
+  "scripts": {
+    "start": "micro index"
+  },
+  "dependencies": {
+    "micro": "latest"
+  }
+}
