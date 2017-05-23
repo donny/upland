@@ -1,1 +1,3 @@
-module.exports = () => 'Ahoy, world!'
+module.exports = () => ({
+  date: new Date
+})
