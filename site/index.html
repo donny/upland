@@ -2,14 +2,20 @@
 <html>
 
 <head>
-    <title>Testing</title>
+    <title>Upland</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
 </head>
 
 <body>
-    This is the body of the static .html file. Below is the result of the JSON request to the API server:
+    <br/>
+    <div class="container">
+        <div class="has-text-centered">
+            <h1 class="title"><a href="https://www.reddit.com/r/EarthPorn/">EarthPorn</a>: amazing images of light and landscape</h1>
+        </div>
+    </div>
+    <br/>
 
-    <pre id="result"></pre>
+    <table id="results"></table>
 
     <script type="text/javascript">
         fetch('https://upland-api.now.sh')
@@ -17,7 +23,12 @@
                 return res.json();
             })
             .then(function(data) {
-                document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+                data.forEach(image => {
+                    var table = document.getElementById('results')
+                    var row = table.insertRow(0)
+                    var cell = row.insertCell(0)
+                    cell.innerHTML = `<img src=${JSON.stringify(image)}/>`
+                })
             })
             .catch(function(e) {
                 console.error(e);
