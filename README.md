@@ -1,14 +1,16 @@
 # upland
 
-Upland is ...
+Upland is a web site and API using [Micro](https://github.com/zeit/micro) that displays landscape photos from [Reddit](https://www.reddit.com/r/EarthPorn/) and deployed on [Now](https://zeit.co/now).
 
 ### Background
 
-This project is part of [52projects](https://donny.github.io/52projects/) and the new stuff that I learn through this project: [Now](https://zeit.co/now), [Micro](https://github.com/zeit/micro), and [Bulma](http://bulma.io).
+This project is part of [52projects](https://donny.github.io/52projects/) and the new stuff that I learn through this project: [Micro](https://github.com/zeit/micro) and [Now](https://zeit.co/now).
 
 ### Project
 
-...
+Upland fetches the landscape photos from the trending page of Reddit [/r/EarthPorn](https://www.reddit.com/r/EarthPorn/). Upland displays the full resolution photos one by one on a page. The screenshot of Upland can be found below:
+
+![Screenshot](https://raw.githubusercontent.com/donny/upland/master/screenshot1.png)
 
 ### Implementation
 
