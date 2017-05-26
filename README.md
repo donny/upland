@@ -83,4 +83,4 @@ And the screenshot below shows the aliases:
 
 ### Conclusion
 
-...
+I find it true that Now provides a simpler hosting platform compared to Heroku for JavaScript powered websites and applications. It is very easy to setup and quite minimal. It doesn't even require the directory to be a git repository. From any directory or folder, we could just deploy the site or app with ease. I quite like Micro that allows you to write robust microservices and it avoids JavaScript callback soup. I will definitely use Now and Micro for future microservices.
