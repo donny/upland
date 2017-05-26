@@ -16,7 +16,7 @@ Upland fetches the landscape photos from the trending page of Reddit [/r/EarthPo
 
 [Now](https://zeit.co/now) from [Zeit](https://zeit.co) provides realtime global deployments. It allows us to take a directory that contains a `package.json` file or static files; and deploys it with ease and speed. In practical terms, Now provides a simpler hosting platform (compared to [Heroku](https://www.heroku.com)) for JavaScript powered websites and applications.
 
-Upland consists of 2 packages: [`api`](https://github.com/donny/upland/blob/master/api) that fetches a JSON data structure from Reddit and parses it; and [`site`](https://github.com/donny/upland/blob/master/site) that fetches the processed JSON, gets the image URLs, and display them.
+Upland consists of 2 packages: [`api`](https://github.com/donny/upland/blob/master/api) (back-end) that fetches a JSON data structure from Reddit and parses it; and [`site`](https://github.com/donny/upland/blob/master/site) (front-end) that fetches the processed JSON, gets the image URLs, and display them. We use [Bulma](http://bulma.io) as the CSS framework for the site.
 
 The main `index.js` of `api` is very simple and it is shown below:
 
@@ -66,8 +66,7 @@ And the main component of `index.html` of `site` is shown below:
 </script>
 ```
 
-We use [Bulma](http://bulma.io) as the CSS framework for the Upland web page.
-
+Upland is deployed on Now and each deployment results in a unique hostname. Thus, we need to use [aliases](https://zeit.co/docs/features/aliases) to get more stable hostnames. The deployment steps are shown below:
 
 ```shell
 cd api
@@ -77,6 +76,10 @@ cd ../site
 now deploy
 now alias [deployed host] upland-site
 ```
+
+And the screenshot below shows the aliases:
+
+![Screenshot](https://raw.githubusercontent.com/donny/upland/master/screenshot2.png)
 
 ### Conclusion
 
